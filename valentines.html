@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Valentine's Day Card</title>
+    <style>
+        
+        body {
+            font-family: 'Tangerine', serif;
+            background-image:url(valentine.png);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+           
+           
+        }
+
+        
+       
+        #hiddenHeader1,
+       #hiddenHeader2 {
+      display: none;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+      
+    #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+
+        .leaf {
+            
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: fallAnimation 2s linear infinite, spinAnimation 2s linear infinite;
+        }
+        
+
+        .card {
+            background-color: #f9adad;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            box-shadow:  1 20px rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: floatAnimation 5s ease-in-out infinite;
+            
+        }
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(-20px);
+            }
+        }
+        @keyframes floatAnimation {
+            50%, 100% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(-25px);
+            }
+        }
+        #heart {
+            color: red;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        #heart {
+            color: rgb(255, 132, 132);
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        #message {
+            color: rgb(195, 76, 90);
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            
+        }
+
+        #sender {
+            font-weight: bold;
+        }
+
+        #signature {
+            margin-top: 20px;
+            font-style: normal;
+            color: #d06969;
+        }
+        #cardButton{
+            background-color: #a35b5b;
+            color: aliceblue;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #hiddenHeader1,
+    #hiddenHeader2 {
+      display: none;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+    .button-container {
+      display: flex;
+    }
+
+    button {
+      margin-right: fixed   
+      
+    }
+
+    audio {
+    position: fixed;
+    bottom: 150px;
+    right: fixed;
+    width: 150px;
+   
+}
+
+    </style>
+</head>
+<body>
+    <audio controls autoplay loop>
+        <source src="ily.m4a" type="audio/mp3">
+    
+    </audio>
+
+<div class="card">
+    <div id="heart">❤️</div>
+    <div id="message">Happy Valentines Day Darling!</div>
+    <div id="sender">Will You Be My Valentine??</div>
+    <div id="signature">(Didn't Put a No Button bc u Have No Choice :) </div>
+    <button onclick="showPopup()">Yes</button>
+    
+    <div id="popup">
+        <p>🌸🌸Yayyyy!!🌸🌸</p>
+        <button onclick="closePopup()">okayy</button>
+    </div>
+   <section>
+    <h1 class="heading-1"❤️></h1>
+        ❤️
+    </heading-1></h1>
+   </section> 
+   
+    
+    </div>
+</div>
+
+
+
+
+<script> 
+
+     function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+   
+</script>
+<footer>
+    <p> I love you..❤️</p>
+   </footer>
+
+</body>
+</html>
