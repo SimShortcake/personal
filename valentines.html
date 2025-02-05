@@ -1,203 +1,295 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>Valentine's Day Card</title>
-    <style>
-        
-        body {
-            font-family: 'Tangerine', serif;
-            background-image:url(valentine.png);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-           
-           
-        }
-
-        
-       
-        #hiddenHeader1,
-       #hiddenHeader2 {
-      display: none;
-      background-color: #f2f2f2;
-      padding: 10px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-    }
-
-      
-    #popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-
-
-        .leaf {
-            
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            animation: fallAnimation 2s linear infinite, spinAnimation 2s linear infinite;
-        }
-        
-
-        .card {
-            background-color: #f9adad;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-            box-shadow:  1 20px rgb(255, 255, 255);
-            padding: 20px;
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: floatAnimation 5s ease-in-out infinite;
-            
-        }
-        @keyframes floatAnimation {
-            0%, 100% {
-                transform: translate(-50%, -50%) translateY(0);
-            }
-            50% {
-                transform: translate(-50%, -50%) translateY(-20px);
-            }
-        }
-        @keyframes floatAnimation {
-            50%, 100% {
-                transform: translate(-50%, -50%) translateY(0);
-            }
-            50% {
-                transform: translate(-50%, -50%) translateY(-25px);
-            }
-        }
-        #heart {
-            color: red;
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        #heart {
-            color: rgb(255, 132, 132);
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        #message {
-            color: rgb(195, 76, 90);
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            
-        }
-
-        #sender {
-            font-weight: bold;
-        }
-
-        #signature {
-            margin-top: 20px;
-            font-style: normal;
-            color: #d06969;
-        }
-        #cardButton{
-            background-color: #a35b5b;
-            color: aliceblue;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #hiddenHeader1,
-    #hiddenHeader2 {
-      display: none;
-      background-color: #f2f2f2;
-      padding: 10px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-    }
-
-    .button-container {
-      display: flex;
-    }
-
-    button {
-      margin-right: fixed   
-      
-    }
-
-    audio {
-    position: fixed;
-    bottom: 150px;
-    right: fixed;
-    width: 150px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Resume</title>
+  <link rel="stylesheet" href="css.css">
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
    
-}
-
-    </style>
+    
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: #ae8f72;
+      background: url('https://i.gifer.com/2r5w.gif') repeat center;
+      
+      background-size: CENTER;
+      color: #d0a47b;
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden;
+      animation: fadeInPage 1.5s ease-in-out;
+    }
+    
+    @keyframes fadeInPage {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #c5ac88,#ae8f72);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px #c7968d;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: #c7968d;
+      transform: skewX(-30deg);
+      transition: left 0.5s;
+    }
+    
+    header:hover::before {
+      left: 100%;
+    }
+    
+    section {
+      background: rgb(255, 224, 224);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px #b58756;
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    h1, h2 {
+      font-weight: bold;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    ul li {
+      margin-bottom: 10px;
+      padding: 12px;
+      border-left: 6px solid #b58756;
+      background: rgba(255, 240, 245, 0.7);
+      border-radius: 8px;
+      opacity: 0;
+      animation: slideIn 1s ease-in-out forwards;
+      transition: background 0.3s;
+    }
+    
+    ul li:hover {
+      background: rgba(255, 200, 215, 0.8);
+    }
+    
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    .floating {
+      animation: float 2s infinite ease-in-out;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(5px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .animated-border {
+      border: 3px dashed #b58756;
+      padding: 15px;
+      border-radius: 10px;
+      animation: borderGlow 1.5s infinite alternate;
+    }
+    
+    @keyframes borderGlow {
+      from { border-color: #c7968d; }
+      to { border-color: #c7968d; }
+    }
+    
+    .neon-glow {
+      text-shadow: 0 0 5px #c7968d, 0 0 10px #c7968d;
+    }
+  </style>
 </head>
 <body>
-    <audio controls autoplay loop>
-        <source src="ily.m4a" type="audio/mp3">
+  <header>
+    <h1 class="floating neon-glow">Simge Açıkgöz</h1>
+    <p>Graphic Designer </p>
+    <p>Email: simgeackz@gmail.com | Tel: +0 552 244 52 98</p>
     
-    </audio>
+    <button onclick="window.open('https://www.linkedin.com/in/simge-açikgöz', '_blank')">Linkedin Hesabima Goz At!</button>
 
-<div class="card">
-    <div id="heart">❤️</div>
-    <div id="message">Happy Valentines Day Darling!</div>
-    <div id="sender">Will You Be My Valentine??</div>
-    <div id="signature">(Didn't Put a No Button bc u Have No Choice :) </div>
-    <button onclick="showPopup()">Yes</button>
+
     
-    <div id="popup">
-        <p>🌸🌸Yayyyy!!🌸🌸</p>
-        <button onclick="closePopup()">okayy</button>
-    </div>
-   <section>
-    <h1 class="heading-1"❤️></h1>
-        ❤️
-    </heading-1></h1>
-   </section> 
-   
-    
-    </div>
-</div>
+  </header>
+  
+  <section class="interests animated-border">
+    <h2>Özgeçmiş Özeti</h2>
+    <p>Simge Açıkgöz – Grafik Tasarımcı
 
+      Yaratıcı çözümler geliştirmeyi ve teknik bilgiyle sanatı birleştirmeyi seven bir
+      tasarımcıyım. Grafik tasarım eğitimim boyunca hem dijital hem de fiziksel üretim
+      süreçlerine ilgi duydum ve bu alanda kendimi geliştirme fırsatı yakaladım.
+      Lise yıllarımda Mekatronik (Otomasyon) eğitimi alarak teknik bilgiye olan ilgimi
+      keşfettim ve Çeksan Yol Süpürme Araçları Fabrikası'nda Ar-Ge departmanında
+      çalışarak tasarım ve teknik üretimin birleştiği bir alanda deneyim kazandım.
+      Üniversitede Grafik Tasarım eğitimi alırken kurumsal kimlik, logo ve tabela
+      tasarımları üzerine çeşitli projeler gerçekleştirdim.
+      Onesto'da üretim ve CNC operasyon süreçlerinde çalışarak, grafik tasarımın
+      sadece dijital değil, aynı zamanda üretime nasıl entegre edildiğini öğrendim. CNC
+      ve lazer kesim makinelerini aktif olarak kullanarak, tasarımların gerçeğe dönüşme
+      sürecine katkı sağladım. Üretim ekibiyle koordineli çalışarak iş akışlarını yönettim,
+      kalite kontrol süreçlerinde görev aldım ve müşteri teslimatlarının sorunsuz
+      ilerlemesini sağladım.
+      Teknoloji ve tasarımın birleştiği alanlara özel bir ilgim var. CorelDRAW, Adobe
+      Illustrator ve Photoshop gibi programları aktif olarak kullanıyorum ve üretim
+      süreçlerine entegre ediyorum. Ayrıca HTML & CSS öğrenerek web tasarım
+      konusundaki becerilerimi geliştirmekteyim.
+      Gelecekte, tasarım ve üretim süreçlerini daha inovatif hale getiren projelerde yer
+      almayı ve teknik bilgiyle estetik anlayışı birleştiren çalışmalar yapmayı
+      hedefliyorum.
+      </p>
+  </section>
+  
+  <section class="experience animated-border">
+    <h2>İş Deneyimleri
+</h2>
+    <ul>
+      
+      <li>
 
+        <h2>Stajyer Öğrenci</h2>
+        
+        <h3>.çeksan Yol Süpürme | </h3>
+        <p>Hizmet Sektörü, AR-GE Departmanı
+          Lise döneminde, İzmir Torbalı'da bulunan Mavi Teknik'te Mekatronik (Otomasyon)
+          Bölümü'nde eğitim aldım ve bu süreçte Çeksan Yol Süpürme Araçları Fabrikası'nda
+          mekatronik öğrencisi olarak staj yaptım. Staj sürecimde birçok makine ve elektrik
+          işleriyle uğraşarak teknik bilgi ve becerilerimi geliştirme fırsatı buldum. Özellikle ArGe bölümünde çalışarak, Çeksan'ın ürettiği yol süpürme araçları için tasarımlar
+          yaptım.
+          Bu staj süresi boyunca:
+          Makine ve Elektrik İşleri: Çeşitli makinelerin ve elektrik sistemlerinin bakım ve
+          onarımı konularında pratik deneyim kazandım.
+          Ar-Ge Çalışmaları: Çeksan'ın Ar-Ge bölümünde görev alarak, yol süpürme araçlarına
+          yönelik yenilikçi tasarımlar geliştirdim. Bu, yaratıcılığımı ve problem çözme
+          yeteneklerimi ön plana çıkardı.
+          Ekip Çalışması: Farklı mühendislik ve teknik ekiplerle birlikte çalışarak, takım
+          çalışması ve iletişim becerilerimi geliştirdim.
+          Staj deneyimim, teknik bilgi birikimimi artırarak, mekatronik ve otomasyon alanında
+          karşılaştığım sorunlara yaratıcı ve etkili çözümler bulmamı sağladı. Bu süreç,
+          mesleki gelişimime önemli katkılarda bulundu ve gelecekteki kariyer hedeflerim
+          için sağlam bir temel oluşturdu.
+          </p>
+        <p><em>Eylül 2020 - Haziran 2021</em></p>
+      </li>
+      <ul>
+      <li>
+        <h2>Stajyer Teknisyen</h2>
+        
+      <h3>Turkcell Satış Pazarlama </h3>
+        <p>Hizmet Sektörü, Satış Departmanı
+          Bir ay boyunca Turkcell’de satış temsilcisi olarak çalışarak müşteri ilişkileri ve satış
+          süreçlerinde deneyim kazandım. Bu süreçte, müşteri ihtiyaçlarına yönelik çözümler
+          sunarak iletişim becerilerimi ve girişkenliğimi geliştirdim. İş koşulları nedeniyle
+          görevimden ayrıldım, ancak bu deneyim profesyonel gelişimime katkı sağladı.</p>
+        <p><em> Ekim 2024 - Kasım 2024</em></p>
+      </li>
+    </ul>
+    <li>
+      <h2>Grafiker</h2>
+      
+    <h3>Onesto - Grafiker </h3>
+      <p>Ticaret Sektörü, Tasarım / Grafik Departmanı
 
+         Grafik tasarım sürecinde gelen tasarım dosyalarını analiz ederek malzeme ve renk
+ayrımını gerçekleştirdim.
+ CNC ve lazer kesim makinelerini aktif olarak kullanarak çeşitli malzemelerin
+işlenmesini sağladım.
+Yan duvar makinelerine üretim dosyalarını yükleyerek kesim sonrası montaj
+süreçlerinin doğru ilerlemesini sağladım.
+ Üretim ekibiyle koordineli çalışarak, kesilen parçaların yan duvar montaj
+süreçlerini takip ettim ve kalite kontrol süreçlerine katkıda bulundum.
+ Üretimi tamamlanan kutu harflerin eksiksiz olup olmadığını denetleyerek müşteri
+teslimat süreçlerinin verimli bir şekilde yürütülmesini sağladım.
+ CorelDRAW becerilerimi ileri seviyeye taşıyarak, üretim süreçlerinde dijital dosya
+yönetimi ve makine uyumluluğu konularında deneyim kazandım.
+</p>
+      <p><em>  Ekim 2024 - Şubat 2025</em></p>
+    </li>
+  </ul>
+  </section>
+  <section class="education animated-border">
+    <h2>Eğitim Bilgileri</h2>
+    <ul>
+      <li>
+        <h3>Pancar Osb. Mesleki ve Teknik Anadolu Lisesi</h3>
+        <p>Endüstriyel Otomasyon Teknolojisi (Mekanik)</p>
+        <p><em>Haziran 2021</em></p>
+      </li>
 
-<script> 
+      <li>
+        <h3>Manisa Celal Bayar Üniversitesi</h3>
+        <p>Soma Meslek Yüksekokulu, Grafik (MYO) </p>
+        <p><em>Eylül 2022 - Eylül 2024</em></p>
+      </li>
 
-     function showPopup() {
-        document.getElementById('popup').style.display = 'block';
-    }
-    function closePopup() {
-        document.getElementById('popup').style.display = 'none';
-    }
+    </ul>
+  </section>
 
-   
-</script>
-<footer>
-    <p> I love you..❤️</p>
-   </footer>
+  <section class="skills animated-border">
+    <h2>Yetenekler</h2>
+    <ul>
+      <li>Illustrator </li>
+      <li>Coreldraw</li>
+      <li>Photoshop</li>
+      <li>InDesign</li>
+      <li>After Effects</li>
+    </ul>
+  </section>
+
+  <section class="interests animated-border">
+    <h2>Diller</h2>
+    <ul> 
+      <li><p>Türkçe (Ana Dil)</p></li>
+      <li> <p>İngilizce (İyi)</p></li>
+  </ul>
+  </section>
+
+  <section class="interests animated-border">
+    <h2>Hobi ve İlgi Alanları</h2>
+    <ul> 
+    <li> <p>Hobilerim genelde yaratıcılığımı konuşturduğum şeylerdir. Grafik tasarıma ilgi
+      duyarken, resim yapmayı ve dijital sanatla uğraşmayı çok seviyorum. Çizim ve
+      animasyon yaparken kendimi özgür hissediyorum. Kod yazmak da son zamanlarda
+      ilgimi çeken bir şey, bu konuda daha çok şey öğrenmek istiyorum. Bir yandan da
+      örgü örmekle rahatlıyorum, büyük projeler yapmak oldukça keyifli. Dışarıda vakit
+      geçirmeyi seviyorum, motor sürmek ve yüzmek gibi aktivitelerle enerjimi toplarım.</p></li></section>ul> 
+  </section>
+  <section class="interests animated-border">
+    <h2>Sosyal Medya Bağlantıları</h2>
+    <p><a href="https://www.linkedin.com/in/your-profile" target="_blank"> LinkedIn</a></p>
+
+  <p><a href="https://www.instagram.com/simge_ackz?igsh=bGdxM2thNTd2aXRj" target="_blank">instagram</a></p>
+  <p><a href="https://wa.me/5522445298" target="_blank">WhatsApp</a></p>
+  <p><a href="mailto:simgeackz@gmail.com" target="_blank">Gmail</a></p>
+  
+  </section>
 
 </body>
 </html>
