@@ -1,15 +1,29 @@
-body 
- 
+background { 
+color: #c7968d;
+
+}
 
 
+button {
+  background-color: #c7968d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-
-footer {
-    background-color: #743434;
-    color: rgb(255, 176, 176);
-    text-align: center;
-    padding: 0,0005px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+button:hover {
+  background-color: #c7968d;
+}
+@media (max-width: 768px) {
+  section {
+    max-width: 100%;
+    margin: 10px;
+  }
+}
+a {
+color: #c7968d;
 }
